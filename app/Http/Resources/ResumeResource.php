@@ -18,8 +18,8 @@ class ResumeResource extends JsonResource
             'name' => $this->name,
             'email' => $this->email,
             'location' => $this->location,
-            'job_title' => $this->,job_title,
-            'portfolio_url' => $this->,portfolio_url,
+            'job_title' => $this->job_title,
+            'portfolio_url' => $this->portfolio_url,
             'phone' => $this->phone,
         ];
     }
