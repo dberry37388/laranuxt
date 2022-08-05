@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Resume;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+        $userData = [
+            'name' => 'John Doe',
+            'email' => 'test@example.org'
+        ];
+
+        User::factory(1)
+            ->has(Resume::factory($userData)->count(1))
+            ->create($userData);
     }
 }
