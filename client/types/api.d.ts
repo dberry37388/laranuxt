@@ -27,3 +27,15 @@ export interface User {
 }
 
 export type Users = Array<User>
+
+export interface Resume {
+  user: User,
+  name: string,
+  email: string,
+  location: string,
+  job_title: string,
+  portfolio_url: string,
+  phone: string,
+}
+
+export type Resumes = Array<Resume>
