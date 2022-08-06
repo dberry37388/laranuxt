@@ -22,4 +22,8 @@ Route::get('/', [Controller::class, 'routes'])
 Route::get('/example', [Controller::class, 'example'])->name('example route');
 Route::get('/error', [Controller::class, 'error'])->name('error route');
 
-Route::get('resume/{resume}', [ResumeController::class, 'show'])->name('resume.show');
+
+Route::prefix('resume')->name('resume.')->group(function () {
+    Route::get('{resume}', [ResumeController::class, 'show'])->name('show');
+    Route::put('{resume}', [ResumeController::class, 'update'])->name('update');
+});
