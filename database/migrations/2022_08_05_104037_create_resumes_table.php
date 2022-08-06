@@ -19,7 +19,7 @@ class CreateResumesTable extends Migration
             $table->string('name', 300);
             $table->string('location', 300);
             $table->string('job_title', 300);
-            $table->string('portfolio_url', 300);
+            $table->string('portfolio_url', 300)->nullable();
             $table->string('email', 300);
             $table->string('phone', 300);
             $table->timestamps();
