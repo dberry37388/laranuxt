@@ -1,7 +1,5 @@
 <template>
-  <div class="flex items-center justify-center">
-    <Nuxt />
-  </div>
+  <Nuxt />
 </template>
 
 <style>
