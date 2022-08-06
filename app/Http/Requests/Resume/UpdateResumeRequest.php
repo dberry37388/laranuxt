@@ -30,6 +30,7 @@ class UpdateResumeRequest extends FormRequest
             'job_title' => 'required|max:300',
             'portfolio_url' => 'sometimes|max:300',
             'phone' => 'required|max:300',
+            'about_me' => 'sometimes|max:1000',
         ];
     }
 }

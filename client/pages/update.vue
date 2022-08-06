@@ -1,7 +1,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import BasicInformation from '@/components/partials/BasicInformation.vue'
-import { Resume } from '@/types/api'
 
 export default Vue.extend({
   components: { BasicInformation },

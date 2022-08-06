@@ -6,9 +6,10 @@ import Input from '@/components/forms/Input.vue'
 import { Resume } from '@/types/api'
 import InputError from '@/components/forms/InputError.vue'
 import Button from '@/components/forms/Button.vue'
+import TextArea from '@/components/forms/TextArea.vue'
 
 export default Vue.extend({
-  components: { InputError, Input, Label, FormSection, Button },
+  components: { TextArea, InputError, Input, Label, FormSection, Button },
 
   data () {
     const loading = true
@@ -91,6 +92,19 @@ export default Vue.extend({
           />
 
           <InputError v-if="errors.name" :message="errors.name[0]" />
+        </div>
+
+        <div class="col-span-6 sm:col-span-4">
+          <Label for="about_me" value="About Me" />
+          <TextArea
+            id="about_me"
+            v-model="form.about_me"
+            autocomplete="about_me"
+            class="mt-1 block w-full py-2 px-3"
+            type="text"
+          />
+
+          <InputError v-if="errors.name" :message="errors.about_me[0]" />
         </div>
 
         <div class="col-span-6 sm:col-span-4">

@@ -1,8 +1,11 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Resume } from '@/types/api'
+import Button from '@/components/forms/Button.vue'
 
 export default Vue.extend({
+  components: {Button},
+
   data () {
     const loading = true
     const resume = {} as Resume
@@ -27,9 +30,8 @@ export default Vue.extend({
 })
 </script>
 
-
 <template>
-  <div v-if="!loading" class="container">
+  <div v-if="!loading" class="max-w-7xl mx-auto mt-10">
     <div class="grid gap-5 lg:grid-cols-3">
       <div class="space-y-5">
         <!-- Left Column -->
@@ -41,6 +43,12 @@ export default Vue.extend({
 
             <div class="text-sm text-gray-400">
               {{ resume.job_title }}
+            </div>
+
+            <div class="mt-5">
+              <NuxtLink to="/update" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                Update Resume
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -91,6 +99,20 @@ export default Vue.extend({
                   <a :href="resume.portfolio_url" target="_blank">View</a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-5 col-span-2">
+        <div class="shadow rounded-xl overflow-hidden">
+          <div class="p-7 bg-white relative">
+            <div class="text-lg font-semibold">
+              About Me
+            </div>
+
+            <div class="text-sm text-gray-500">
+              {{ resume.about_me }}
             </div>
           </div>
         </div>

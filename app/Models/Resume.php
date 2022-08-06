@@ -16,6 +16,7 @@ class Resume extends Model
         'portfolio_url',
         'email',
         'phone',
+        'about_me',
     ];
 
     public function user()

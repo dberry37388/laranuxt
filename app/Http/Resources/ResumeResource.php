@@ -21,6 +21,7 @@ class ResumeResource extends JsonResource
             'job_title' => $this->job_title,
             'portfolio_url' => $this->portfolio_url,
             'phone' => $this->phone,
+            'about_me' => $this->about_me,
         ];
     }
 }

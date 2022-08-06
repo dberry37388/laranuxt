@@ -27,6 +27,7 @@ class ResumeModelTest extends TestCase
                 'portfolio_url',
                 'email',
                 'phone',
+                'about_me',
                 'created_at',
                 'updated_at'
             ]);
@@ -43,6 +44,7 @@ class ResumeModelTest extends TestCase
                 'portfolio_url',
                 'email',
                 'phone',
+                'about_me',
             ]);
     }
 

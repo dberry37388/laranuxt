@@ -29,7 +29,8 @@ class ResumeFactory extends Factory
             'location' => $this->faker->city . $this->faker->randomElement(['TN', 'AL', 'GA', 'MS', 'MI']),
             'job_title' => $this->faker->jobTitle,
             'portfolio_url' => $this->faker->url,
-            'phone' => $this->faker->e164PhoneNumber
+            'phone' => $this->faker->e164PhoneNumber,
+            'about_me' => $this->faker->paragraph,
         ];
     }
 }

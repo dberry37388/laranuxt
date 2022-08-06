@@ -27,9 +27,10 @@ class StoreResumeRequest extends FormRequest
             'name' => 'required|max:300',
             'email' => 'required|email|max:300',
             'location' => 'required|max:300',
-            'job_title' => 'required|max:300',,
-            'portfolio_url' => 'required|max:300',,
+            'job_title' => 'required|max:300',
+            'portfolio_url' => 'required|max:300',
             'phone' => 'required|max:300',
+            'about_me' => 'sometimes',
         ];
     }
 }

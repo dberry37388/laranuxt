@@ -36,6 +36,7 @@ export interface Resume {
   job_title: string,
   portfolio_url: string,
   phone: string,
+  about_me: string,
 }
 
 export type Resumes = Array<Resume>
