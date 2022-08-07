@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ResumeController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +27,8 @@ Route::get('/error', [Controller::class, 'error'])->name('error route');
 Route::prefix('resume')->name('resume.')->group(function () {
     Route::get('{resume}', [ResumeController::class, 'show'])->name('show');
     Route::put('{resume}', [ResumeController::class, 'update'])->name('update');
+
+    Route::prefix('{resume}')->name('experiences')->group(function () {
+        Route::resource('experiences', ExperienceController::class)->except('create', 'edit');
+    });
 });
