@@ -1,11 +1,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Resume } from '@/types/api'
-import Button from '@/components/forms/Button.vue'
 
 export default Vue.extend({
-  components: {Button},
-
   data () {
     const loading = true
     const resume = {} as Resume
@@ -113,6 +110,30 @@ export default Vue.extend({
 
             <div class="text-sm text-gray-500">
               {{ resume.about_me }}
+            </div>
+          </div>
+        </div>
+
+        <div class="shadow rounded-xl overflow-hidden">
+          <div class="p-7 bg-white relative">
+            <div class="text-lg font-semibold">
+              Experience
+            </div>
+
+            <div class="divide-y divide-gray-100">
+              <div v-for="experience in resume.experiences" :key="experience.id" class="w-full py-4">
+                <div class="flex items-center justify-between">
+                  <div class="font-medium">{{ experience.job_title }}</div>
+
+                  <div class="text-gray-700">
+                    {{ experience.start_date }} - {{ experience.end_date }}
+                  </div>
+                </div>
+
+                <p class="text-gray-500">
+                  {{ experience.description }}
+                </p>
+              </div>
             </div>
           </div>
         </div>

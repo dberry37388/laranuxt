@@ -22,6 +22,7 @@ class ExperienceResource extends JsonResource
             'start_date' => $this->start_date->format('m/Y'),
             'end_date' => $this->end_date->format('m/Y'),
             'is_present' => $this->is_present,
+            'description' => $this->description,
         ];
     }
 }

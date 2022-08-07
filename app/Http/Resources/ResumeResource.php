@@ -22,6 +22,9 @@ class ResumeResource extends JsonResource
             'portfolio_url' => $this->portfolio_url,
             'phone' => $this->phone,
             'about_me' => $this->about_me,
+            'experiences' => ExperienceResource::collection(
+                $this->experiences()->orderBy('start_date', 'desc')->get()
+            ),
         ];
     }
 }

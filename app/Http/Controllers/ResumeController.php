@@ -6,7 +6,7 @@ use App\Http\Requests\Resume\StoreResumeRequest;
 use App\Http\Requests\Resume\UpdateResumeRequest;
 use App\Http\Resources\ResumeResource;
 use App\Models\Resume;
-use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
 class ResumeController extends BaseController
@@ -14,7 +14,7 @@ class ResumeController extends BaseController
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -46,8 +46,8 @@ class ResumeController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Resume  $resume
-     * @return \Illuminate\Http\Response
+     * @param Resume $resume
+     * @return Response
      */
     public function show(Resume $resume)
     {
@@ -57,9 +57,9 @@ class ResumeController extends BaseController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Resume  $resume
-     * @return \Illuminate\Http\Response
+     * @param UpdateResumeRequest $request
+     * @param Resume $resume
+     * @return Response
      */
     public function update(UpdateResumeRequest $request, Resume $resume)
     {
@@ -71,8 +71,8 @@ class ResumeController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Resume  $resume
-     * @return \Illuminate\Http\Response
+     * @param Resume $resume
+     * @return Response
      */
     public function destroy(Resume $resume)
     {

@@ -29,6 +29,7 @@ export interface User {
 export type Users = Array<User>
 
 export interface Resume {
+  id: number,
   user: User,
   name: string,
   email: string,
@@ -37,17 +38,20 @@ export interface Resume {
   portfolio_url: string,
   phone: string,
   about_me: string,
+  experiences: Experiences
 }
 
 export type Resumes = Array<Resume>
 
 export interface Experience {
+  id: number,
   resume_id: number,
   resume: Resume,
   job_title: string,
   start_date: string,
   end_date: string,
-  is_present: boolean
+  is_present: boolean,
+  description: string,
 }
 
 export type Experiences = Array<Experience>

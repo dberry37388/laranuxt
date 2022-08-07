@@ -72,7 +72,7 @@ export default Vue.extend({
     <FormSection v-if="!loading" @submitted="updateBasicInformation">
       <template #title>
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-          Update Resume
+          Contact Information
         </h2>
       </template>
 
