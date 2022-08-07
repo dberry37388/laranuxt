@@ -40,3 +40,14 @@ export interface Resume {
 }
 
 export type Resumes = Array<Resume>
+
+export interface Experience {
+  resume_id: number,
+  resume: Resume,
+  job_title: string,
+  start_date: string,
+  end_date: string,
+  is_present: boolean
+}
+
+export type Experiences = Array<Experience>
