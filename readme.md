@@ -13,16 +13,9 @@
 
 > *NEW* Want all of your models typed out as interfaces? check out [modeltyper](https://github.com/fumeapp/modeltyper)
 
-## Laravel + Nuxt.js Boilerplate
+## Sample Resume Project
 
-[![](https://img.shields.io/badge/nuxt.js-v2.15.8-04C690.svg)](https://nuxtjs.org)
-[![](https://img.shields.io/badge/Laravel-v8.60.0-ff2e21.svg)](https://laravel.com)
-![Test PHP](https://github.com/acidjazz/laranuxt/workflows/Test%20PHP/badge.svg)
-![Test Javascript](https://github.com/acidjazz/laranuxt/workflows/Test%20Javascript/badge.svg)
-[![Lint Javascript](https://github.com/acidjazz/laranuxt/actions/workflows/lint-js.yml/badge.svg)](https://github.com/acidjazz/laranuxt/actions/workflows/lint-js.yml)
-[![Lint PHP](https://github.com/acidjazz/laranuxt/actions/workflows/lint-php.yml/badge.svg)](https://github.com/acidjazz/laranuxt/actions/workflows/lint-php.yml)
-
-![](client/static/laranuxt.gif?raw=true)
+![](client/static/screenshot.jpg?raw=true)
 
 ### What is included
 
@@ -55,4 +48,22 @@ git clone git@github.com:Rimsys/laranuxt.git; cd laranuxt; yarn; composer instal
 * run `yarn api` (alias for `./artisan serve`) in another terminal for our laravel API
 
 ### Features
+
+* Ability to update your basic information such as name, title, phone, email, etc...
+* Ability to add experiences (work, project, etc...)
+* Typed models for user, resume, and experiences
+* Basic restful api with responses, and requests
+
+### What I'd Do Differently
+
+From the instructions, the intent was to spend a few hours to demonstrate basic working knowledge. With that in mind, I
+kept this pretty simple and implemented basic crud for the user's information and the experiences to show some different
+approaches.
+
+If I was just doing a simple resume for myself, I'd probably go with something a little less heavy, such as a static
+filesystem. For this demo project, I went ahead as though it would have the ability to have multiple users each with
+multiple resumes.
+
+There is no authentication in this app, so for demonstration purposes, I've hardcoded to the first user and their
+first resume.
 
