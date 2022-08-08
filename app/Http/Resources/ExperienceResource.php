@@ -19,8 +19,8 @@ class ExperienceResource extends JsonResource
             'id' => $this->id,
             'resume_id' => $this->resume_id,
             'job_title' => $this->job_title,
-            'start_date' => $this->start_date->format('m/Y'),
-            'end_date' => $this->end_date->format('m/Y'),
+            'start_date' => $this->start_date->format('m/d/Y'),
+            'end_date' => $this->end_date->format('m/d/Y'),
             'is_present' => $this->is_present,
             'description' => $this->description,
         ];

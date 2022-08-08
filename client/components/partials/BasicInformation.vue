@@ -96,7 +96,7 @@ export default Vue.extend({
 
         <div class="col-span-6 sm:col-span-4">
           <Label for="about_me" value="About Me" />
-          <TextArea
+          <Input
             id="about_me"
             v-model="form.about_me"
             autocomplete="about_me"

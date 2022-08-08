@@ -29,11 +29,11 @@ export default Vue.extend({
 
 <template>
   <div v-if="!loading" class="max-w-7xl mx-auto mt-10">
-    <div class="grid gap-5 lg:grid-cols-3">
+    <div class="grid gap-5 grid-cols-1 lg:grid-cols-3">
       <div class="space-y-5">
         <!-- Left Column -->
         <div class="shadow rounded-xl overflow-hidden">
-          <div class="pt-14 p-7 bg-white relative">
+          <div class="p-7 bg-white relative">
             <div class="text-lg font-semibold">
               {{ resume.name }}
             </div>

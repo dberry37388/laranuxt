@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Requests\Resume;
+namespace App\Http\Requests\Experience;
 
+use Carbon\Carbon;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateExperienceRequest extends FormRequest
@@ -25,9 +26,10 @@ class UpdateExperienceRequest extends FormRequest
     {
         return [
             'job_title' => 'required|max:300',
-            'start_date' => 'required|date',
-            'end_date' => 'sometimes|date|after:start_date',
-            'is_present' => 'sometimes|boolean'
+            'start_date' => 'required|date_format:m/d/Y',
+            'end_date' => 'sometimes|date_format:m/d/Y|after:start_date',
+            'is_present' => 'sometimes|boolean',
+            'description' => 'required|max:1000',
         ];
     }
 }

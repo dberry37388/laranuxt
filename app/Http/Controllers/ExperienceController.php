@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Resume\StoreExperienceRequest;
-use App\Http\Requests\Resume\UpdateExperienceRequest;
+use App\Http\Requests\Experience\StoreExperienceRequest;
+use App\Http\Requests\Experience\UpdateExperienceRequest;
 use App\Http\Resources\ExperienceResource;
 use App\Models\Experience;
 use App\Models\Resume;
@@ -40,7 +40,7 @@ class ExperienceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Experience  $experience
+     * @param Experience $experience
      * @return Response
      */
     public function show(Experience $experience)
@@ -52,24 +52,28 @@ class ExperienceController extends Controller
      * Update the specified resource in storage.
      *
      * @param UpdateExperienceRequest $request
-     * @param \App\Models\Experience $experience
+     * @param Resume $resume
+     * @param Experience $experience
      * @return Response
      */
-    public function update(UpdateExperienceRequest $request, Experience $experience)
+    public function update(UpdateExperienceRequest $request, Resume $resume, Experience $experience)
     {
         $experience->update($request->validated());
 
-        return $this->render(new ExperienceResource($experience));
+        return $this->render(new ExperienceResource($experience->fresh()));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Experience  $experience
+     * @param Resume $resume
+     * @param Experience $experience
      * @return Response
      */
-    public function destroy(Experience $experience)
+    public function destroy(Resume $resume, Experience $experience)
     {
-        //
+        $experience->delete();
+
+        return $this->render([], 204);
     }
 }
